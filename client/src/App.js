@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import { getWeather } from "./services/weather";
+import CurrentWeather from './CurrentWeather';
 
 class App extends Component {
   constructor() {
@@ -29,8 +31,26 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log("submitting some things");
+    getWeather(this.state.lat, this.state.lon)
+    .then(response => {
+      const currentWeather = response.data.currently;
+      this.setState({
+        currentWeather: currentWeather
+      });
+    })
+    .catch(error => {
+      console.error(error);
+      this.setState({
+        error: "you continue to disappoint me, madeline."
+      });
+    });
   }
   render() {
+    if(this.setState.error){
+      return (
+        <h1>{this.state.error}</h1>
+      );
+    }
     return (
       <div>
         <h1>Weatherify!</h1>
@@ -60,6 +80,10 @@ class App extends Component {
           </label>
           <button type="submit">get weather now</button>
         </form>
+        { this.state.error ? <h1>{this.state.error}</h1> : ''}
+        { isEmptyObject (...this.state.currentWeather) ?
+        "" : 
+        <CurrentWeather {...this.state.currentWeather}/>  }
       </div>
     );
   }
