@@ -18,6 +18,15 @@ class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.setState({
+        lat: position.coords.latitude,
+        lon: position.coords.longitude
+      });
+    });
+  }
+
   handleLatChange(e) {
     this.setState({
       lat: +e.target.value
@@ -63,6 +72,7 @@ class App extends Component {
               type="number"
               min="-90"
               max="90"
+              step="0.0000000000000001"
               onChange={e => this.handleLatChange(e)}
               value={this.state.lat}
               required
@@ -74,6 +84,7 @@ class App extends Component {
               type="number"
               min="-180"
               max="180"
+              step="0.0000000000000001"
               onChange={e => this.handleLonChange(e)}
               value={this.state.lon}
               required
