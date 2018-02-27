@@ -10,7 +10,7 @@ const CurrentWeather = props => {
             <ul>
                 <li>Time: {convertTimestamp(props.time)}</li>
                 <li>Summary: {props.summary}</li>
-                <li>Icon: <img src={images(props.icon)} alt={props.icon}/></li>
+                <li>Icon: <img src={images(props.time)} alt={props.icon}/></li>
                 <li>Temperature: {props.temperature}&deg;F</li>
             </ul>
         </section>
