@@ -20,7 +20,7 @@ class App extends Component {
 
   handleLatChange(e) {
     this.setState({
-      lon: +e.target.value
+      lat: +e.target.value
     });
   }
 
