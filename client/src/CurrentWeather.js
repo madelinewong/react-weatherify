@@ -7,10 +7,10 @@ import images from './images';
 const CurrentWeather = props => {
     return ( 
         <section>
-            <ul>
+           <div> <img src={images(props.time)} className="images" alt={props.icon}/></div>
+           <ul>
                 <li>Time: {convertTimestamp(props.time)}</li>
                 <li>Summary: {props.summary}</li>
-                <li>Icon: <img src={images(props.time)} className="images" alt={props.icon}/></li>
                 <li>Temperature: {props.temperature}&deg;F</li>
             </ul>
         </section>

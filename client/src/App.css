@@ -1,5 +1,5 @@
 body {
-  background-color: #FAF4F4;
+  background-color: #FFe4e1;
 }
 h1 {
   flex: 0%;
@@ -8,9 +8,9 @@ h1 {
   padding-left: 550px;
 }
 label {
-  font-size: 30px;
+  font-size: 20px;
   font-family: sans-serif;
-  padding-left: 325px;
+  padding-left: 200px;
 }
 p {
   font-size: 30px;

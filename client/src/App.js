@@ -63,6 +63,9 @@ class App extends Component {
     }
     return (
       <div>
+         { isEmptyObject (this.state.currentWeather) ?
+        "" : 
+        <CurrentWeather {...this.state.currentWeather}/>  }
         <h1>Weatherify!</h1>
         <p>lat/lon</p>
         <form onSubmit={e => this.handleSubmit(e)}>
@@ -93,9 +96,6 @@ class App extends Component {
           <button type="submit">get weather now</button>
         </form>
         { this.state.error ? <h1>{this.state.error}</h1> : ''}
-        { isEmptyObject (this.state.currentWeather) ?
-        "" : 
-        <CurrentWeather {...this.state.currentWeather}/>  }
       </div>
     );
   }
