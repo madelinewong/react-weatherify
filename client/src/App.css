@@ -4,18 +4,19 @@ body {
 h1 {
   flex: 0%;
   font-size: 50px;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding-left: 550px;
 }
 label {
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding-left: 200px;
 }
 p {
-  font-size: 30px;
-  font-family: sans-serif;
-  padding-left: 625px;
+  padding-top: 20px;
+  font-size: 28px;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 30rem;
 }
 button:hover {
   background-color: white;

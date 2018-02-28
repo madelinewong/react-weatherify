@@ -63,11 +63,14 @@ class App extends Component {
     }
     return (
       <div>
+        <style>
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+</style>
          { isEmptyObject (this.state.currentWeather) ?
         "" : 
         <CurrentWeather {...this.state.currentWeather}/>  }
         <h1>Weatherify!</h1>
-        <p>lat/lon</p>
+        <p>Don't worry, she geolocates.</p>
         <form onSubmit={e => this.handleSubmit(e)}>
           <label>
             lat:
