@@ -4,5 +4,7 @@ body {
   font-family: sans-serif;
 }
 .images {
- padding-left: 300px;
+image-rendering: crisp-edges;
+text-align: center;
+ min-width: 100%;
 }
