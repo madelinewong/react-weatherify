@@ -64,7 +64,8 @@ class App extends Component {
     return (
       <div>
         <style>
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+        @import url('https://fonts.googleapis.com/css?family=Lobster');          
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
 </style>
          { isEmptyObject (this.state.currentWeather) ?
         "" : 
