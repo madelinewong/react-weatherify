@@ -70,7 +70,7 @@ class App extends Component {
         "" : 
         <CurrentWeather {...this.state.currentWeather}/>  }
         <h1>Weatherify!</h1>
-        <p>Don't worry, she geolocates.</p>
+        <p>Don't worry, she geolocates to where you are to take the guesswork out.</p>
         <form onSubmit={e => this.handleSubmit(e)}>
           <label>
             lat:
@@ -96,7 +96,7 @@ class App extends Component {
               required
             />
           </label>
-          <button type="submit">get weather now</button>
+          <button type="submit" className="btn btn-default">Get Weather!</button>
         </form>
         { this.state.error ? <h1>{this.state.error}</h1> : ''}
       </div>
